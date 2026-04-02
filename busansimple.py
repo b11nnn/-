@@ -269,10 +269,10 @@ def load_data():
     job_df["업무환경_텍스트"] = job_df.get("직업 내 비교업무환경 : 업무수행능력", pd.Series(dtype=str)).fillna("")
 
     # ── 기업 데이터 ──────────────────────────────────────────────
-    # busansimple.py 272라인 근처
+    # busansimple.py 273라인 수정
     comp_df = pd.read_csv(
         "worknet_smlgnt_master.xls",
-        encoding="utf-8-sig",  # 이 부분을 꼭 수정하세요!
+        encoding="euc-kr",  # utf-8-sig 대신 euc-kr 시도
         sep="\t",
         on_bad_lines="skip",
         dtype=str
