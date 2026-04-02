@@ -271,10 +271,8 @@ def load_data():
     # ── 기업 데이터 ──────────────────────────────────────────────
     # busansimple.py 273라인 수정
     comp_df = pd.read_csv(
-        "worknet_smlgnt_master.xls",
-        encoding="euc-kr",  # utf-8-sig 대신 euc-kr 시도
-        sep="\t",
-        on_bad_lines="skip",
+        "worknet_smlgnt_master.csv",
+        encoding="utf-8-sig",
         dtype=str
     )
     # 💥 이 코드를 추가하세요! 모든 컬럼명의 앞뒤 공백을 제거합니다.
